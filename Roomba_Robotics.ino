@@ -27,16 +27,16 @@ void setup()
   }
 void loop()
 {
-  delay(50);
+  delay(25);
   unsigned int uS = sonar.ping();
-  if( uS / US_ROUNDTRIP_CM > 25 || uS / US_ROUNDTRIP_CM == 0)
+  if( uS / US_ROUNDTRIP_CM > 35 || uS / US_ROUNDTRIP_CM == 0)
   {
     // Move forward
-    forward(220);
-    }else if( uS / US_ROUNDTRIP_CM < 25)
+    forward(185);
+    }else if( uS / US_ROUNDTRIP_CM < 35)
     {
-      turnRight(200);
-      delay(900);
+      turnRight(150);
+      delay(750);
       }
   }
 
